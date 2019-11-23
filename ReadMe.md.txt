@@ -11,9 +11,10 @@ Package:
 	8.hanziconv
 	9.easygui
 	10.mimetypes
+	11.io
 
 套件安裝command:
-	python PackageInstall.py
+	pip install -r PackageInstall.txt
 
 程式執行:
 	python FileConvert.py
