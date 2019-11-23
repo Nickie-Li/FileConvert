@@ -15,6 +15,7 @@ from hanziconv import HanziConv
 import easygui
 import mimetypes
 from time import gmtime, strftime
+import io
 
 
 # In[8]:
@@ -53,7 +54,7 @@ def convert_encoding_to_utf_8(filename):
     content = HanziConv.toTraditional(content)
     os.remove(filename)
     filename = HanziConv.toTraditional(filename)
-    with open(filename, 'w', encoding='UTF-8-SIG') as file:
+    with io.open(filename, 'w', encoding='UTF-8-SIG') as file:
         file.write(content)
     success_cnt+=1
 
@@ -70,6 +71,7 @@ def convert_dir(root_dir):
         for f in files:
             filename = os.path.join(root, f)
             backup(filename)
+            convert_encoding_to_utf_8(filename)
             try:
                 convert_encoding_to_utf_8(filename)
             except:
@@ -84,10 +86,13 @@ if __name__ == '__main__':
     path = easygui.enterbox("Please enter the path of file that you want to convert:")
     total_cnt = 0
     success_cnt = 0
-    if len(sys.argv) == 1:
-        raw_input("[error] need root dir")
-        sys.exit(-1)
-    convertdir = sys.argv[1]
+    # print(sys.argv)
+    # if len(sys.argv) == 1:
+    #     address = input("[error] need root dir")
+    #     sys.argv.append(address)
+        # sys.exit(-1)
+    convertdir = '-f'
+    path = unicode(path, 'utf-8')
     backup_to_zip(path)
     convert_dir(path)
 
