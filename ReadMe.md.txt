@@ -23,3 +23,6 @@ Note:
 	2.會自動Backup所有檔案，新檔案名稱會加上postfix: _backup
 	3.以防萬一，還有zip的備份
 	4.最後會顯示哪些檔案轉檔失敗
+
+若檔案不慎損毀 可至github重新下載：
+https://github.com/Nickie-Li/FileConvert
