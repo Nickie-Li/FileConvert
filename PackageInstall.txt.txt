@@ -1,0 +1,4 @@
+chardet
+pytest-shutil
+hanziconv
+easygui
