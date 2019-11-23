@@ -92,7 +92,7 @@ if __name__ == '__main__':
     #     sys.argv.append(address)
         # sys.exit(-1)
     convertdir = '-f'
-    path = unicode(path, 'utf-8')
+#     path = unicode(path, 'utf-8')
     backup_to_zip(path)
     convert_dir(path)
 
