@@ -12,6 +12,7 @@ Package:
 	9.easygui
 	10.mimetypes
 	11.io
+	12.tkinter
 
 套件安裝command:
 	pip install -r PackageInstall.txt
@@ -21,7 +22,8 @@ Package:
 
 Note:
 	1.對話框内輸入要轉的folder位置(絕對路徑)
-	2.會自動Backup所有檔案，新檔案名稱會加上postfix: _backup
+	2.勾選選擇需要執行的功能
+	2.若有轉編碼或轉繁體，會Backup所有檔案，新檔案名稱會加上postfix: _backup
 	3.以防萬一，還有zip的備份
 	4.最後會顯示哪些檔案轉檔失敗
 
