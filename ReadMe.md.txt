@@ -1,3 +1,14 @@
+Python 3.8 安裝
+	1.至https://www.python.org/downloads/release/python-380/ 下載mac版本
+	2.執行下載的檔案，全部按continue
+	3.執行terminal，輸入以下指令
+	4.依照此篇文章設定環境變數 http://blog.ctrlxctrlv.net/mac-environment-path/
+		a.vi ~/.bash_profile
+		b.修改這一行 export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.8/bin
+		c.按esc,輸入:wq儲存
+		4.在terminal輸入source ~/.bash_profile並執行
+
+
 Enviroment: Python 3.5以上
 
 Package:
@@ -15,10 +26,10 @@ Package:
 	12.tkinter
 
 套件安裝command:
-	pip install -r PackageInstall.txt
+	pip3 install -r PackageInstall.txt
 
 程式執行:
-	python FileConvert.py
+	python3 FileConvert.py
 
 Note:
 	1.對話框内輸入要轉的folder位置(絕對路徑)
